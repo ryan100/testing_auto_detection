@@ -1,0 +1,3 @@
+SUBSYSTEMS=="usb", ACTION=="add", RUN+="/sbin/insmod /home/saurabh/Documents/challenge/testing_auto_detection/task_05/modules/lkm.ko"
+SUBSYSTEMS=="usb", ACTION=="remove", RUN+="/sbin/rmmod /home/saurabh/Documents/challenge/testing_auto_detection/task_05/modules/lkm.ko"
+
