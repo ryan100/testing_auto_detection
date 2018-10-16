@@ -5,9 +5,6 @@
 #include <linux/usb/input.h>
 #include <linux/hid.h>
 
-#ifndef DEBUG
-#define DEBUG
-#endif
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("SAURABH");
@@ -28,25 +25,13 @@ MODULE_DEVICE_TABLE(usb, id_table);
 
 static int __init init_mod(void)
 {
-#ifdef DEBUG
-	pr_debug("%s:Begin\n", __func__);
-#endif
 	pr_info("HELLO WORLD\n");
-#ifdef DEBUG
-	pr_debug("%s:END\n", __func__);
-#endif
 	return 0;
 }
 
 static void __exit exit_mod(void)
 {
-#ifdef DEBUG
-	pr_debug("%s:Begin\n", __func__);
-#endif
 	pr_info("BYE\n");
-#ifdef DEBUG
-	pr_debug("%s:END\n", __func__);
-#endif
 }
 
 module_init(init_mod);
